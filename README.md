@@ -1,7 +1,3 @@
-작성하신 보고서 내용은 프로젝트의 목적과 가치가 아주 명확하게 담겨 있습니다! 이를 깃허브 README.md에 어울리는 세련된 구조로 정리해 드릴게요.
-
-아래 내용을 그대로 복사해서 아까 열어두신 README.md 편집창에 붙여넣으세요.
-
 🛡️ Nudge Guardian
 플랫폼의 기만적인 유도(Dark Patterns)로부터 사용자의 의사결정권을 되찾아주는 서비스
 
@@ -20,7 +16,5 @@ Nudge Guardian은 이러한 악의적인 넛지가 감지될 때 실시간 경�
 
 ✨ Key Features
 Real-time Detection: 기만적 키워드 실시간 탐지 및 시각적 경고 뱃지 부여
-
 Fact Check Engine: 허위 구매 정보 및 조작된 데이터 폭로
-
 Guardian Switch: 원클릭으로 감지 모드를 활성화하여 전/후 상태 비교 가능
