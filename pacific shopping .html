@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nudge.css"> 
+    <title>pacific shopping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * { box-sizing: border-box; }
+        body{
+            background-color:aliceblue;
+            margin: 30px;
+            /* justify-content:center;*/
+        }
+       
+        /* .bodymid{
+            display: flex;          
+            justify-content: center; 
+            align-items: center;   
+            min-height: 100vh;         
+            margin: 0%;
+            padding: 32px;
+        } */
+
+        .press-start-2p-regular {
+            font-family: "boldonse"; 
+            margin-top: 0;
+        }
+
+.part1 { color: blue !important; }
+.part2 { color: cornflowerblue !important; }
+.part3 { color: cornflowerblue !important; }   
+        .page{
+            width:100%;
+            max-width:1200px;
+            display: flex;
+            gap: 40px;
+            align-items: stretch;} 
+        
+        .leftpic,.right {flex:1; min-width:0;} 
+
+        .leftpic{
+            padding:5px;
+            box-shadow: 0 0px 0px black;
+            display:flex;
+            align-items: center;
+            
+
+            /* width: 300px;
+            padding:20px;
+            border: 5px; */
+
+        }
+
+        .right{
+            border-radius: 28px;
+            padding: 40px;
+            min-height: 620px;
+            box-shadow: 5 0px 5px;
+            line-height: 1;
+        }
+
+        .hero-img img{
+            width:100%;}
+
+        .hero-img{
+            width:100%;
+            height: auto;    
+            display: block;
+        }
+        @media (max-width: 900px) {
+            .page { flex-direction: column; }}
+
+        .korean-title {
+            font-family: "IBM Plex Sans";
+            font-style:normal;
+        }
+
+        .heart-checkbox input {
+        display: none;
+    }
+
+    /* 하트 */
+    .heart-checkbox {
+        display: inline-block;
+        align-items: center;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;   
+        user-select: none;
+    }
+
+    
+    .heart-checkbox .icon::before {
+        content: "♡"; 
+    }
+
+
+    .heart-checkbox input:checked + .icon {
+        color: #ff4d4d; 
+    }
+
+    .heart-checkbox input:checked + .icon::before {
+        content: "♡"; 
+    }
+
+    
+    .heart-checkbox:active {
+        transform: scale(1.3);
+    }
+
+    .iteam-row {
+        display: flex; /*가로 정렬 */
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    /* 버튼 */
+    .buy-button{
+        width:50%;
+        height: 45px;
+        border-radius: 2px;
+        border:none;
+
+        background-color: blue;
+        color:white;
+        font-size: 16px;
+        font-weight: bold;
+
+        cursor: pointer;
+        transition: all 0.3 ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: top 15px;
+    }
+
+    .buy-button:hover{
+        background-color:#4869F6;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0,1);
+    }
+
+    .buy-button:active{
+        transform: translateY(0);
+    }
+
+    .in-button{
+        width:50%;
+        height: 45px;
+        border-radius: 2px;
+        border:none;
+
+        background-color: gray;
+        color:white;
+        font-size: 16px;
+        font-weight: bold;
+
+        cursor: pointer;
+        transition: all 0.3 ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: top 15px;
+    }
+
+    .in-button:hover{
+        background-color:#bfbfbf;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0,1);
+    }
+
+    .in-button:active{
+        transform: translateY(0);
+    }
+    @keyframes rainbow-text {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: red; }
+    }
+
+    .rainbow-led {
+    font-weight: bold;
+    font-size: 30px;
+    animation: rainbow-text 3s infinite linear;
+    font-family: "IBM Plex Sans";
+    }
+
+    .switch { position: relative; display: inline-block; width: 50px; height: 24px; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px; }
+    .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+    input:checked + .slider { background-color: #ff0000; }
+    input:checked + .slider:before { transform: translateX(26px); }
+    </style>
+
+</head>
+<body>
+        
+    </div>
+    <h1 class="press-start-2p-regular" style="margin-top:0.5px; align-items: left;">
+        <span class="part1">Pacific</span> 
+        <span class="part2">Shopping</span> 
+    </h1>
+    <hr>
+    <div class="page">
+        <div class="leftpic">
+            <div class="hero-img">
+                <img src="lipstc.png" style="box-sizing:border-box;">
+            </div>
+        </div>
+        <div class="right">
+            <h1 class="korean-title"> 그린유스 비건 립스틱 </h1>
+            <div class="iteam-row">
+                <label class="heart-checkbox"> 
+                    <input type="checkbox">
+                    <span class="icon"></span> 
+                </label>
+                <span class="korean-title" style="font-size: 20px; color:#870e0c; font-weight: 450;">25,000원</span>
+                <span class="rainbow-led" style="color:gray; font-size:15px;">단 2개 남음 빨리 주문하세요!</span>
+                
+            </div>
+               <p class="korean-title" style="font-weight: 450; font-size: 15px;">
+                한 달간 <span style="color: red; font-weight: bold;">10,000명</span> 이상 구매한 인기 제품! </p>
+            
+            <div class="iteam-row">
+                <button class="in-button" > 장바구니 담기 </button>
+                <button class="buy-button" >바로 구매</button>
+            </div>
+            <div class="iteam-row">
+                <p style="color:orange; font-size: 17px;">★★★★☆</p>
+                <a href="test.html" target="_self" title="reset password" style="font-size:15px;"> 제품 후기 7,200개  </a>
+                <style>
+                    a:link{ 
+                    color:blue}
+
+                    a:visited{
+                    color:gray;}
+
+                    a:hover{
+                    color:darkblue;}  
+                </style>
+            </div>
+            <hr>
+            <div style="background: #f0f0f0; padding: 10px; border-bottom: 2px solid #ccc; display: flex; align-items: center; gap: 10px;">
+                <strong style="color: #333;">🛡️ Nudge Guardian Mode:</strong>
+                <label class="switch">
+                    <input type="checkbox" id="guardianMode">
+                    <span class="slider"></span>
+                </label>
+                <span id="statusText"></span>
+            </div>
+        </div>
+    
+    </div>
+    </div>
+    
+
+<script src="content.js"></script>
+</body>
+</html>
